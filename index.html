@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Factura Proforma | ValleTech</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #fff;
+    }
+
+    .marcadeagua {
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0.05;
+      z-index: 3;
+      pointer-events: none;
+    }
+
+    .marcadeagua img {
+      max-width: 600px;
+    }
+
+    .sello {
+      position: absolute;
+      top: 90%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-20deg);
+      font-size: 2.5rem;
+      color: #28a745;
+      font-weight: bold;
+      border: 3px dashed #28a745;
+      padding: 0.5rem 2rem;
+      border-radius: 0.75rem;
+      text-transform: uppercase;
+      z-index: 1;
+    }
+
+    .table th, .table td {
+      vertical-align: middle;
+    }
+
+    footer {
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body class="d-flex justify-content-center ">
+
+  <!-- Marca de agua -->
+  <div class="marcadeagua">
+    <img src="logofactura.png" alt="Marca de Agua">
+  </div>
+  <div class="container py-4" >
+  
+    <!-- Encabezado -->
+    <div class="row align-items-center mb-4">
+      <div class="col-md-6 d-flex gap-3 align-items-start">
+        <img src="logofactura.png" alt="Logo ValleTech" style="max-height: 80px;">
+        <div>
+          <h2 class="h5 fw-bold mb-1">ValleTech Soluciones Tecnológicas</h2>
+          <p class="mb-0 small text-muted">Av. Ilaló S2-150 y Río Curaray, Conocoto</p>
+          <p class="mb-0 small text-muted">Valle de los Chillos, Quito, Ecuador</p>
+          <p class="mb-0 small fw-semibold">RUC: 1791234567001</p>
+          <p class="mb-0 small">Contacto: 
+            <a href="mailto:ventas.valletech@email.ec" class="link-primary">ventas.valletech@email.ec</a> /
+            <a href="tel:+59322865555" class="link-secondary">(02) 286-5555</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-md-6 text-md-end mt-4 mt-md-0">
+        <h1 class="h4 fw-bold">Factura Proforma</h1>
+        <p class="mb-1"><strong>Número:</strong> PRO-2025-001</p>
+        <p><strong>Fecha:</strong> 17 de Mayo de 2025</p>
+      </div>
+    </div>
+
+    <!-- Cliente -->
+    <div class="mb-4">
+      <h5 class="border-bottom pb-2">Datos del Cliente</h5>
+      <p class="mb-1"><strong>Nombre:</strong> Steven Díaz</p>
+      <p class="mb-1"><strong>Cédula/RUC:</strong> 1719876543</p>
+      <p class="mb-1"><strong>Dirección:</strong> Calle de los Geranios E10-55 y Av. Amazonas, Quito</p>
+      <p class="mb-0"><strong>Contacto:</strong> 
+        <a href="mailto:steven.diaz.cliente@email.com" class="link-info">steven.diaz.cliente@email.com</a> /
+        <a href="tel:+593991234560" class="link-success">0991234560</a>
+      </p>
+    </div>
+
+    <!-- Productos -->
+    <div class="mb-4" style="position: relative;">
+      <div class="sello">PAGADO</div>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="table-light">
+            <tr>
+              <th>Código</th>
+              <th>Descripción</th>
+              <th class="text-end">Cantidad</th>
+              <th class="text-end">Precio Unitario</th>
+              <th class="text-end">Subtotal</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>LAP-XYZ-ALP</td>
+              <td>Laptop Gamer XYZ Modelo Alpha - Core i7, 16GB RAM, 1TB SSD, RTX 4060</td>
+              <td class="text-end">1</td>
+              <td class="text-end">$1250.00</td>
+              <td class="text-end">$1250.00</td>
+            </tr>
+            <tr>
+              <td>MON-CUR-27</td>
+              <td>Monitor Curvo LED 27" Full HD, 165Hz, 1ms</td>
+              <td class="text-end">1</td>
+              <td class="text-end">$280.00</td>
+              <td class="text-end">$280.00</td>
+            </tr>
+            <tr>
+              <td>TEC-MEC-RGB</td>
+              <td>Teclado Mecánico Retroiluminado RGB, Switch Blue</td>
+              <td class="text-end">1</td>
+              <td class="text-end">$75.00</td>
+              <td class="text-end">$75.00</td>
+            </tr>
+            <tr>
+              <td>MOU-ERG-PRO</td>
+              <td>Mouse Ergonómico Inalámbrico Pro, 8 Botones Programables</td>
+              <td class="text-end">1</td>
+              <td class="text-end">$45.00</td>
+              <td class="text-end">$45.00</td>
+            </tr>
+            <tr class="fw-semibold">
+              <td colspan="4" class="text-end">Subtotal:</td>
+              <td class="text-end">$1650.00</td>
+            </tr>
+            <tr class="fw-semibold">
+              <td colspan="4" class="text-end">IVA (15%):</td>
+              <td class="text-end">$247.50</td>
+            </tr>
+            <tr class="table-success fw-bold">
+              <td colspan="4" class="text-end h5">TOTAL:</td>
+              <td class="text-end h5">$1897.50</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Pago -->
+    <div class="mb-4">
+      <h5 class="border-bottom pb-2">Información de Pago</h5>
+      <p><strong>Forma de Pago:</strong> Transferencia Bancaria / Tarjeta de Crédito</p>
+      <p><strong>Observaciones:</strong> Garantía de 1 año. Validez: 7 días. Precios incluyen IVA.</p>
+      <p><strong>Datos Bancarios:</strong> Banco Pichincha - Cta. Corriente: 2100XXXXXX - A nombre de ValleTech Soluciones Tecnológicas - RUC: 1791234567001</p>
+    </div>
+
+    <!-- Footer -->
+    <footer class="text-center text-muted small">
+      <p class="mb-1">¡Gracias por preferir ValleTech Soluciones Tecnológicas!</p>
+      <p class="mb-0"><a href="https://www.valletech.ec" class="link-primary">www.valletech.ec</a></p>
+    </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
